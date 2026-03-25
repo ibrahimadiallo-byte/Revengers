@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community HelpBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Community HelpBoard</h1>
+        <p>Connect with your neighbors for help and support</p>
+    </header>
+
+    <main>
+        <form id="help-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="Help Needed">Help Needed</option>
+                <option value="Offering Help">Offering Help</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Post to Board</button>
+        </form>
+
+        <div id="post-feed">
+            <!-- Posts will be displayed here -->
+        </div>
+    </main>
+</body>
+</html></content>
+<parameter name="filePath">/Users/jaygibbs/Desktop/Revengers/index.html
