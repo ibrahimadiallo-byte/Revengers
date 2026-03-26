@@ -1,0 +1,343 @@
+/* Community HelpBoard - CSS Styling */
+/* Daniel's Role: CSS Lead - Accessible & Vibrant Design */
+
+/* Body styling - High contrast background */
+body {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 80px 20px 20px 20px; /* Extra top padding for fixed header */
+  min-height: 100vh;
+  color: #ecf0f1;
+}
+
+/* Fixed Navigation Header - Static Earthy Colors */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #8b4513 0%, #daa520 50%, #228b22 100%);
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff; /* High contrast white text */
+}
+
+header p {
+  margin: 5px 0 0 0;
+  font-size: 1.1em;
+  opacity: 0.95;
+  font-weight: 300;
+  color: #f8f9fa; /* Slightly off-white for better readability */
+}
+
+/* Static earthy design - no animations needed */
+
+/* Form container styling - High contrast */
+.form-container {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #bdc3c7;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #ffffff;
+  color: #2c3e50; /* High contrast text */
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #daa520;
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.3);
+  transform: scale(1.02);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #7f8c8d; /* Medium gray for placeholders */
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23343a40' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 45px;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Button styling - Accessible and vibrant */
+form button {
+  background: linear-gradient(45deg, #8b4513, #228b22);
+  color: #ffffff;
+  padding: 16px 32px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+form button:focus {
+  outline: 3px solid #daa520;
+  outline-offset: 2px;
+}
+
+form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+  border-color: #654321;
+}
+
+form button:hover::before {
+  left: 100%;
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+/* Post feed styling */
+#post-feed {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Post card styling - Accessible with high contrast */
+.post-card {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 16px;
+  border-left: 5px solid;
+  border-image: linear-gradient(180deg, #8b4513, #228b22, #daa520) 1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b4513, #228b22, #daa520, #cd853f);
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.post-card h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50; /* High contrast dark text */
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.post-card .category {
+  display: inline-block;
+  background: linear-gradient(45deg, #8b4513, #228b22);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  border: 2px solid transparent;
+}
+
+.post-card .category:focus {
+  outline: 2px solid #3498db;
+}
+
+.post-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #34495e; /* Dark gray for good contrast */
+}
+
+.post-card small {
+  color: #7f8c8d; /* Medium gray for timestamps */
+  font-size: 0.8em;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Focus states for accessibility */
+.post-card:focus-within {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 100px 15px 20px 15px;
+  }
+
+  header {
+    padding: 12px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .form-container {
+    padding: 20px;
+    margin: 0 10px 20px 10px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    padding: 12px 16px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  form button {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  .post-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .form-container,
+  .post-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    border: 2px solid #000000;
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Loading animation for new posts */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 6px;
+}

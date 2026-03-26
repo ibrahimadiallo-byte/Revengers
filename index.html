@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Community HelpBoard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Community HelpBoard</h1>
+      <p>Post a request or offer and help your neighbors.</p>
+    </header>
+
+    <main class="content">
+      <section class="card form-card" aria-labelledby="form-title">
+        <h2 id="form-title">New Post</h2>
+        <form id="post-form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Help Needed">Help Needed</option>
+            <option value="Offering Help">Offering Help</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Tutoring">Tutoring</option>
+            <option value="Tech Support">Tech Support</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Childcare">Childcare</option>
+            <option value="Housing">Housing</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="What do you need or offer?" required></textarea>
+
+          <button type="submit">Post to Board</button>
+        </form>
+      </section>
+
+      <section class="feed" aria-labelledby="feed-title">
+        <h2 id="feed-title">Community Posts</h2>
+        <div id="post-feed" class="post-feed"></div>
+      </section>
+    </main>
+  </body>
+</html>
