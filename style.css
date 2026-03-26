@@ -11,13 +11,13 @@ body {
   color: #ecf0f1;
 }
 
-/* Fixed Navigation Header - New Color Palette */
+/* Fixed Navigation Header - Earthy Color Palette */
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(90deg, #8e44ad, #e91e63, #00bcd4, #ffc107);
+  background: linear-gradient(90deg, #8b4513, #daa520, #228b22, #cd853f);
   background-size: 400% 400%;
   animation: gradientShift 8s ease infinite;
   color: white;
@@ -94,8 +94,8 @@ form input:focus,
 form select:focus,
 form textarea:focus {
   outline: none;
-  border-color: #00bcd4;
-  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.3);
+  border-color: #daa520;
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.3);
   transform: scale(1.02);
 }
 
@@ -121,7 +121,7 @@ form select {
 
 /* Button styling - Accessible and vibrant */
 form button {
-  background: linear-gradient(45deg, #8e44ad, #e91e63);
+  background: linear-gradient(45deg, #8b4513, #228b22);
   color: #ffffff;
   padding: 16px 32px;
   border: 2px solid transparent;
@@ -132,13 +132,13 @@ form button {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
   position: relative;
   overflow: hidden;
 }
 
 form button:focus {
-  outline: 3px solid #00bcd4;
+  outline: 3px solid #daa520;
   outline-offset: 2px;
 }
 
@@ -155,8 +155,8 @@ form button::before {
 
 form button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
-  border-color: #7b3a9e;
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+  border-color: #654321;
 }
 
 form button:hover::before {
@@ -183,7 +183,7 @@ form button:active {
   padding: 25px;
   border-radius: 16px;
   border-left: 5px solid;
-  border-image: linear-gradient(180deg, #8e44ad, #e91e63, #00bcd4) 1;
+  border-image: linear-gradient(180deg, #8b4513, #228b22, #daa520) 1;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   position: relative;
@@ -197,7 +197,7 @@ form button:active {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #8e44ad, #e91e63, #00bcd4, #ffc107);
+  background: linear-gradient(90deg, #8b4513, #228b22, #daa520, #cd853f);
 }
 
 .post-card:hover {
@@ -214,7 +214,7 @@ form button:active {
 
 .post-card .category {
   display: inline-block;
-  background: linear-gradient(45deg, #8e44ad, #e91e63);
+  background: linear-gradient(45deg, #8b4513, #228b22);
   color: #ffffff;
   padding: 4px 12px;
   border-radius: 20px;
